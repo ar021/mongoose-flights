@@ -5,26 +5,32 @@
     <title>Flights</title>
   </head>
   <body>
-    <h1>Flights List</h1>
-    <table class="table table-striped">
-      <thead >
-        <tr>
-          <th>Airline</th>
-          <th>Airport</th>
-          <th>Flight No</th>
-          <th>Departs</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% flightsArry.forEach(function(flight){ %>
-        <tr>
-          <td><%= flight.airline %></td>
-          <td><%= flight.airport %></td>
-          <td><%= flight.flightNo %></td>
-          <td><%= flight.departs %></td>
-        </tr>
-        <br />
-        <% }); %>
-      </tbody>
+    <nav class="navbar navbar-dark bg-dark">
+      <a href="/flights">List of Flights</a>
+      <a href="/flights/new">Add a Flight</a>
+    </nav>
+    <div class="container">
+      <h1>Flights List</h1>
+      <table class="table table-striped">
+        <thead >
+          <tr>
+            <th>Airline</th>
+            <th>Airport</th>
+            <th>Flight No</th>
+            <th>Departs</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% flightsArry.forEach(function(flight){ %>
+          <tr>
+            <td><%= flight.airline %></td>
+            <td><%= flight.airport %></td>
+            <td><%= flight.flightNo %></td>
+            <td><%= flight.departs %></td>
+          </tr>
+          <br />
+          <% }); %>
+        </tbody>
+    </div>
   </body>
 </html>
